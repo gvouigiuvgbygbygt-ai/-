@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+<meta charset="UTF-8">
+<title>אתר מצחיק 😂</title>
+<style>
+    body {
+        font-family: Arial;
+        text-align: center;
+        background: linear-gradient(to right, #ff9a9e, #fad0c4);
+        color: #333;
+    }
+    button {
+        padding: 15px 25px;
+        font-size: 18px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        background: #ff6b6b;
+        color: white;
+        margin: 10px;
+    }
+    #joke {
+        font-size: 22px;
+        margin-top: 20px;
+    }
+    img {
+        width: 250px;
+        border-radius: 15px;
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+
+<h1>😂 אתר הדברים המצחיקים 😂</h1>
+
+<button onclick="showJoke()">ספר לי בדיחה</button>
+<button onclick="changeImage()">תמונה מצחיקה</button>
+<button onclick="scareUser()">אל תלחץ 😈</button>
+
+<div id="joke"></div>
+<img id="funnyImage" src="" alt="">
+
+<script>
+const jokes = [
+    "למה מחשב לא הולך לים? כי יש לו יותר מדי ווירוסים 🌊💻",
+    "למה העגבנייה הסמיקה? כי היא ראתה את הסלט מתלבש 😂",
+    "מה עושה דג בלי מים? מתבלבל 🐟",
+    "למה ספר מתמטיקה עצוב? כי יש לו יותר מדי בעיות 😭",
+    "איך קוראים לחתול עם משקפיים? חתול חכם 😎"
+];
+
+const images = [
+    "https://i.imgur.com/4AiXzf8.jpeg",
+    "https://i.imgur.com/ZF6s192.jpeg",
+    "https://i.imgur.com/j6qYVQK.jpeg",
+    "https://i.imgur.com/2WZtOD6.jpeg"
+];
+
+function showJoke() {
+    const random = jokes[Math.floor(Math.random() * jokes.length)];
+    document.getElementById("joke").innerText = random;
+}
+
+function changeImage() {
+    const random = images[Math.floor(Math.random() * images.length)];
+    document.getElementById("funnyImage").src = random;
+}
+
+function scareUser() {
+    alert("אמרתי לך לא ללחוץ 😈😂");
+}
+</script>
+
+</body>
+</html>
